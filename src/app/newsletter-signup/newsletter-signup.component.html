@@ -1,0 +1,70 @@
+<!-- <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Email:</label>
+      <input type="email" formControlName="email" required />
+      <div *ngIf="signupForm.controls['email'].hasError('required')">Email is required.</div>
+      <div *ngIf="signupForm.controls['email'].hasError('email')">Invalid email format.</div>
+    </div>
+  
+    <div>
+      <label>How did you hear about us?</label>
+      <select formControlName="howHeard" required>
+        <option value="" disabled>Select an option</option>
+        <option value="Advert">Advert</option>
+        <option value="WordOfMouth">Word of Mouth</option>
+        <option value="Other">Other</option>
+      </select>
+      <div *ngIf="signupForm.controls['howHeard'].hasError('required')">How you heard about us is required.</div>
+    </div>
+  
+    <div>
+      <label>Reason for signing up:</label>
+      <textarea formControlName="reason"></textarea>
+    </div>
+  
+    <div>
+      <button type="submit">Sign Up</button>
+    </div>
+  
+    <div *ngIf="feedbackMessage">
+      <p>{{ feedbackMessage }}</p>
+    </div>
+  </form>
+   -->
+
+
+   <div class="container">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="signup-form">
+      <div>
+        <label>Email:</label>
+        <input type="email" formControlName="email" required />
+        <div *ngIf="signupForm.controls['email'].hasError('required')">Email is required.</div>
+        <div *ngIf="signupForm.controls['email'].hasError('email')">Invalid email format.</div>
+      </div>
+    
+      <div>
+        <label>How did you hear about us?</label>
+        <select formControlName="howHeard" required>
+          <option value="" disabled>Select an option</option>
+          <option value="Advert">Advert</option>
+          <option value="WordOfMouth">Word of Mouth</option>
+          <option value="Other">Other</option>
+        </select>
+        <div *ngIf="signupForm.controls['howHeard'].hasError('required')">How you heard about us is required.</div>
+      </div>
+    
+      <div>
+        <label>Reason for signing up:</label>
+        <textarea formControlName="reason"></textarea>
+      </div>
+    
+      <div>
+        <button type="submit">Sign Up</button>
+      </div>
+    
+      <div *ngIf="feedbackMessage">
+        <p>{{ feedbackMessage }}</p>
+      </div>
+    </form>
+  </div>
+  
